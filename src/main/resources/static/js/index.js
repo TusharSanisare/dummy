@@ -58,7 +58,7 @@ logoutBtn.addEventListener("click", handleLogout);
 
 function handleNewMeeting(){
   const connectedUser = JSON.parse(localStorage.getItem('connectedUser'));
-  window.open(`videocall.html?username=${connectedUser.username}`, "_blank");
+  window.open(`VID.html?username=${connectedUser.username}`, "_blank");
 }
 
 const newMeetingBtn = document.getElementById("newMeetingBtn");
@@ -68,7 +68,7 @@ function handleJoinMeeting(){
   const roomId = document.getElementById("meetingName").value;
     const connectedUser = JSON.parse(localStorage.getItem('connectedUser'));
 
-    const url = `videocall.html?roomID=${roomId}&username=${connectedUser}`;
+    const url = `VID.html?roomID=${roomId}&username=${connectedUser.username}`;
 
     window.open(url, "_blank");
 }
