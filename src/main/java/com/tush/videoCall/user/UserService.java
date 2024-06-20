@@ -11,11 +11,11 @@ public class UserService {
 
     private static final List<User> USER_LIST = new ArrayList<>();
 
-    static {
-        USER_LIST.add(new User("piyush", "piyush@gmail.com", "123", "online"));
-        USER_LIST.add(new User("tarun", "tarun@gmail.com", "123", "online"));
-        USER_LIST.add(new User("shanu", "shanu@gmail.com", "123", "online"));
-    }
+    // static {
+    // USER_LIST.add(new User("piyush", "piyush@gmail.com", "123", "online"));
+    // USER_LIST.add(new User("tarun", "tarun@gmail.com", "123", "online"));
+    // USER_LIST.add(new User("shanu", "shanu@gmail.com", "123", "online"));
+    // }
 
     public void register(User user) {
         user.setStatus("online");

@@ -1,12 +1,16 @@
 package com.tush.videoCall.user;
 
 import lombok.RequiredArgsConstructor;
+
 // import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 // import java.util.stream.IntStream;
+
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RestController;
 
 import static org.springframework.http.HttpStatus.INTERNAL_SERVER_ERROR;
 
@@ -17,7 +21,7 @@ import static org.springframework.http.HttpStatus.INTERNAL_SERVER_ERROR;
 // @Slf4j
 public class UserController {
 
-    private final UserService service;
+    private final UserService service = new UserService();
 
     @PostMapping
     public void register(@RequestBody User user) {
